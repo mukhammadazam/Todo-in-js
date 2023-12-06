@@ -13,31 +13,28 @@
   </head>
   <body>
     <header class="header mt-5">
-      <h1 class="text-primary text-center">Todo List</h1>
+      <h1 onclick="console.log('')" class="text-primary text-center">Todo List</h1>
     </header>
     <main class="container">
       <form id="form" class="form mx-auto mt-5 d-block w-100">
         <div class="d-flex align-items-center justify-content-center">
-         <div class="w-50 position-relative">
-           <input
-            id="input"
-            type="text"
-            class="form__input px-4 py-2 fs-6  outline-none form-control"
-            aria-label=".form-control-lg example"
-            placeholder="Type Todos" />
-          <span class="form__leni position-absolute  d-block" id="message"></span>
-         </div>
+          <div class="w-50 position-relative">
+            <input
+              id="input"
+              type="text"
+              class="form__input px-4 py-2 fs-6 outline-none form-control"
+              aria-label=".form-control-lg example"
+              placeholder="Type Todos" />
+            <span
+              class="form__leni position-absolute d-block"
+              id="message"></span>
+          </div>
           <button class="form__btn btn btn-success py-2 px-4">Add</button>
         </div>
       </form>
-      <ul id="list" class="list-group mt-5 ">
-<li class="list-group-item d-flex justify-content-around w-75  mx-auto"> afjwgfre
-  <div class="todo">
-    <span class="opacity-50 me-2">06,12,2023</span>
-  </div>
-</li>
-      </ul>
+      <ul id="list" class="list-group mt-5"></ul>
     </main>
+    <div class="overlay hidden" id="overlay"></div>
     <script src="./main.js"></script>
   </body>
 </html>
