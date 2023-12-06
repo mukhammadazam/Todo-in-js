@@ -1,0 +1,11 @@
+@import url("../main.scss");
+.container {
+  max-width: 1040px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.form__leni {
+  color: red;
+}/*# sourceMappingURL=main.css.map */
