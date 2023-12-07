@@ -35,12 +35,12 @@ function getFunc() {
   list.innerHTML = "";
   todo.forEach((el, index) => {
     list.innerHTML += `
-         <li ondblclick=(completed(${index})) class="list-group-item d-flex justify-content-between w-50 mx-auto ${
+         <li ondblclick=(completed(${index})) class="list-group-item  d-flex justify-content-between w-50 mx-auto ${
       el.completed == true ? "completed" : ""
     }">
  <div class="d-flex align-items-center">
  <span class="d-block form__leni1 position-relative">
-<img class="position-absolute form__img ${el.completed==true ? "d-none" : ""}" src="./image/check.svg" width="20" height="20" alt="check">
+<img onclick=() class="position-absolute form__img" src="./image/check.svg" width="20" height="20" alt="check">
  </span>
    <h5 class="ps-2 m-0 ">
     ${el.title}
