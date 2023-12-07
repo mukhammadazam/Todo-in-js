@@ -35,9 +35,18 @@ function getFunc() {
   list.innerHTML = "";
   todo.forEach((el, index) => {
     list.innerHTML += `
-         <li ondblclick=(completed(${index})) class="list-group-item d-flex justify-content-between w-50 mx-auto ${el.completed==true ? "completed" : ""}">
-          ${el.title}
-          <div class="todo">
+         <li ondblclick=(completed(${index})) class="list-group-item d-flex justify-content-between w-50 mx-auto ${
+      el.completed == true ? "completed" : ""
+    }">
+ <div class="d-flex align-items-center">
+ <span class="d-block form__leni1 position-relative">
+<img class="position-absolute form__img ${el.completed==true ? "d-none" : ""}" src="./image/check.svg" width="20" height="20" alt="check">
+ </span>
+   <h5 class="ps-2 m-0 ">
+    ${el.title}
+   </h5>
+ </div>
+    <div class="todo">
             <span class="opacity-50 me-2">${el.time}</span>
             <img onclick=(chance=(${index})) class="text-primary cursor-point"  src="./image/edit.svg" alt="editButton" width="25" height="25" />
             <img onclick=(deleteFunction(${index}))  class="text-primary cursor-point" src="./image/trash.svg" alt="deleteButton" width="25" height="25" />
