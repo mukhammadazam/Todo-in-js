@@ -2,6 +2,8 @@ const form = document.getElementById("form");
 const input = document.getElementById("input");
 const message = document.getElementById("message");
 const list = document.getElementById("list");
+const modal = document.getElementById("modal");
+const overlay = document.getElementById("overlay");
 let todo = JSON.parse(localStorage.getItem("text"))
   ? JSON.parse(localStorage.getItem("text"))
   : [];
@@ -36,7 +38,7 @@ function getFunc() {
   todo.forEach((el, index) => {
     list.innerHTML += `
          <li ondblclick=(completed(${index})) class="list-group-item mt-3  d-flex justify-content-between w-50 mx-auto ${
-      el.completed === true ? "bg-danger" : ""
+      el.completed === true ? "completed" : ""
     }">
  <div class="d-flex align-items-center">
  <span class="d-block form__leni1 position-relative">
@@ -48,7 +50,7 @@ function getFunc() {
  </div>
     <div class="todo">
             <span class="opacity-50 me-2">${el.time}</span>
-            <img onclick=(chance=(${index})) class="text-primary cursor-point"  src="./image/edit.svg" alt="editButton" width="25" height="25" />
+            <img onclick=(change=(${index})) class="text-primary cursor-point"  src="./image/edit.svg" alt="editButton" width="25" height="25" />
             <img onclick=(deleteFunction(${index}))  class="text-primary cursor-point" src="./image/trash.svg" alt="deleteButton" width="25" height="25" />
           </div>
         </li>`;
@@ -108,3 +110,16 @@ function completed(i) {
   getFunc();
   todoFunc();
 }
+
+function change(i) {
+open()
+close();
+}
+ function open(){
+  modal.classList.remove("heddin")
+  overlay.classList.remove("heddin")
+ }
+  function close() {
+    modal.classList.add("heddin");
+    overlay.classList.add("heddin");
+  }
