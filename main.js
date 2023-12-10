@@ -35,8 +35,8 @@ function getFunc() {
   list.innerHTML = "";
   todo.forEach((el, index) => {
     list.innerHTML += `
-         <li ondblclick=(completed(${index})) class="list-group-item  d-flex justify-content-between w-50 mx-auto ${
-      el.completed == true ? "completed" : ""
+         <li ondblclick=(completed(${index})) class="list-group-item mt-3  d-flex justify-content-between w-50 mx-auto ${
+      el.completed === true ? "bg-danger" : ""
     }">
  <div class="d-flex align-items-center">
  <span class="d-block form__leni1 position-relative">
